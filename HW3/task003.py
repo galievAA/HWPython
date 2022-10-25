@@ -8,11 +8,11 @@ from random import uniform as uI
 from random import uniform as rI
 from random import Decimal
 
-number = int (input('Р’РІРµРґРёС‚Рµ СЂР°Р·РјРµСЂ СЃРїРёСЃРєР°: '))
+number = int (input('Введите размер списка: '))
 myList = []
 for i in range(number):
     coef = rI(1,5)
-    number = Decimal(f'{round(uI(-10,10), coef}')
+    number = Decimal(f'{round(uI(-10,10), coef)}')
     myList.append(number)
     
 numList = []
@@ -24,5 +24,5 @@ for num in myList:
         mantissa.append(abs(num) - abs(int(num)))
         
 print (numList)
-print(f'РњР°РєСЃРёРјР°Р»СЊРЅР°СЏ {max(mantissa)} Рё РјРёРЅРёРјР°Р»СЊРЅР°СЏ {min(mantissa)} РјР°РЅС‚РёСЃСЃС‹')
-print(f'Р Р°Р·РЅРёС†Р° РјР°РЅС‚РёСЃСЃ {max(mantissa) - min(mantissa)}')
+print(f'Максимальная {max(mantissa)} и минимальная {min(mantissa)} мантиссы')
+print(f'разница мантисс {max(mantissa) - min(mantissa)}')

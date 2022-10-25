@@ -6,7 +6,7 @@
 # [2, 3, 5, 6] => [12, 15]
 from random import randint as rI
 
-number = int(input('Р’РІРµРґРёС‚Рµ СЂР°Р·РјРµСЂ СЃРїРёСЃРєР°: '))
+number = int(input('Введите размер списка: '))
 
 mylist = []
 
