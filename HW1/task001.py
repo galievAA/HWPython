@@ -10,4 +10,23 @@ if 0 < day < 8:
         print('Будний день')
 else:
     print('Нет такого дня недели')
-                
+# from calendar import day_name
+
+
+# match day_name:
+#     case 1:
+#         print('понедельник')
+#     case 2:
+#         print('Вторник')
+#     case 3:
+#         print('среда')
+#     case 4:
+#         print('четверг')
+#     case 5:
+#         print('пятница')
+#     case 6:
+#         print('суббота')
+#     case 7:
+#         print('воскресенье')
+#     case _ :
+#         print("Нет такого дня недели")
