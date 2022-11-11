@@ -2,17 +2,56 @@ from Classes import Contact
 
 
 class Phonebook:
-    contact:list = []
-    last_id:str = ''
-
-    def __init__(self):
+    size:int
+    contact: list = []
+    last_id: str = 0
+    def __int__(self):
         pass
-
-    def add(self, name:str, phone:str, comment:str):
-        user = Contact.Contact(self.last_id, name, phone, comment)
-        self.last_id = str(int(self.last_id) + 1)
+    def add(self,name:str,phone:str,comment:str,id:str=None):
+        if id:
+            user = Contact.Contact(id,name,phone,comment)
+            self.last_id=str(id)
+        else:
+            user = Contact.Contact(self.last_id,name,phone,comment)
         self.contact.append(user)
-
-book = Phonebook()
-book.add('artur', '34534534', '343434')
-print(book.contact[0].show())
+        self.last_id = str(int(self.last_id) +1)
+        
+    def remove(self,id,int):
+        for(index,user) in enumerate(self.contact):
+            if user.id == id:
+                self.contact.pop(index)
+                
+    def show(self,id:int):
+        show_id = None
+        for user in self.contact:
+            if user.id == id:
+                show_id = id
+                break
+        return self.contact[id].show() if show_id else None
+    
+    def show_all(self):
+        all_items = []
+        for user in self.contact:
+            all_items.append(user.items())
+        return all_items
+    
+    
+    def get (self,id:int) -> Contact.Contact:
+        get_id = None
+        for (index,user) in enumerate(self.contact):
+            if user.id == id:
+                get_id = index
+                break
+        return self.contact[get_id] if get_id else None
+        
+    def set(self,id: int, name: str, phone: str, comment: str):
+        for (index,user) in enumerate(self.contact):
+            if(user.id) == id:
+                self.contact[index].name = name
+                self.contact[index].phone = phone
+                self.contact[index].comment = comment
+                
+                
+    def clear(self):
+        self.contact.clear()
+        self.last_id = '0'
