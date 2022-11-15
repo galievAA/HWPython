@@ -15,4 +15,4 @@ while number > 0:
     binaryNumber.insert(0, str(number%2))
     number //= 2
     
-print(f"Число {num} в двоичной системе {','.join(binaryNumber)}")
+print(f"Число {num} в двоичной системе {' '.join(binaryNumber)}")
